@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode></assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.BatchFile>
+      <command></command>
+    </hudson.tasks.BatchFile>
+    <sp.sd.fileoperations.FileOperationsBuilder plugin="file-operations@1.7">
+      <fileOperations>
+        <sp.sd.fileoperations.FolderCopyOperation>
+          <sourceFolderPath></sourceFolderPath>
+          <destinationFolderPath></destinationFolderPath>
+        </sp.sd.fileoperations.FolderCopyOperation>
+      </fileOperations>
+    </sp.sd.fileoperations.FileOperationsBuilder>
+  </builders>
+  <publishers>
+  <com.michelin.cio.hudson.plugins.copytoslave.CopyToMasterNotifier plugin="copy-to-slave@1.4.4">
+      <includes></includes>
+      <excludes></excludes>
+      <overrideDestinationFolder>false</overrideDestinationFolder>
+      <destinationFolder></destinationFolder>
+      <runAfterResultFinalised>true</runAfterResultFinalised>
+    </com.michelin.cio.hudson.plugins.copytoslave.CopyToMasterNotifier>
+  </publishers>
+  <buildWrappers/>
+</project>

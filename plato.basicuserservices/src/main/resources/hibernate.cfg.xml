@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://172.25.14.113:3306/plato_db</property> 
+		
+ 		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.timeout">60</property>
+		<property name="hibernate.c3p0.idle_test_period">40</property>
+		
+
+
+		<property name="show_sql">false</property>
+		<property name="use_sql_comments">true</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="show_sql">false</property>
+
+		<!-- <mapping package="com.PLATO.entities" /> -->
+
+		<mapping class="com.PLATO.entities.AccountMaster" />
+		<mapping class="com.PLATO.entities.CategoryMaster" />
+		<mapping class="com.PLATO.entities.ModuleBuildHistory" />
+		<mapping class="com.PLATO.entities.ModuleJobsJenkins" />
+		<mapping class="com.PLATO.entities.ModuleSubJobsJenkins" />
+		<mapping class="com.PLATO.entities.ModuleSubJobsJenkinsParameters" />
+		<mapping class="com.PLATO.entities.NodeMaster" />
+		<mapping class="com.PLATO.entities.PermissionScreenMaster" />
+		<mapping class="com.PLATO.entities.ProjectMaster" />
+		<mapping class="com.PLATO.entities.ProjectToolMapping" />
+		<mapping class="com.PLATO.entities.RoleMaster" />
+		<mapping class="com.PLATO.entities.RolePermissionMapping" />
+		<mapping class="com.PLATO.entities.StatusMaster" />
+		<mapping class="com.PLATO.entities.ToolMaster" />
+		<mapping class="com.PLATO.entities.UserMaster" />
+		<mapping class="com.PLATO.entities.UserProjectMapping" />
+		<mapping class="com.PLATO.entities.PermissionScreenMaster" />
+		<mapping class="com.PLATO.entities.ScreenFunctionality" />
+		<mapping class="com.PLATO.entities.PermissionModuleMaster" />
+		<mapping class="com.PLATO.entities.RolePermissionMapping" />
+
+		<mapping class="com.PLATO.entities.TEMApplicationDetail" />
+		<mapping class="com.PLATO.entities.TemApplicationResponse" />
+		<mapping class="com.PLATO.entities.TEMDatabaseDetail" />
+		<mapping class="com.PLATO.entities.TemDatabaseResponse" />
+		<mapping class="com.PLATO.entities.TEMServerApplicationMapping" />
+		<mapping class="com.PLATO.entities.TEMServerDetail" />
+		<mapping class="com.PLATO.entities.TemServerResponse" />
+		<mapping class="com.PLATO.entities.PortfolioMaster" />
+		<mapping class="com.PLATO.entities.SubjobCheckpoint" />
+		<mapping class="com.PLATO.entities.SubjobCheckpointDetails" />
+		<mapping class="com.PLATO.entities.CheckpointTemplate" />
+		<mapping class="com.PLATO.entities.CheckpointDetailsTemplate" />
+		<mapping class="com.PLATO.entities.ModuleJobsJenkinsParameters" /> 
+
+	</session-factory>
+</hibernate-configuration>

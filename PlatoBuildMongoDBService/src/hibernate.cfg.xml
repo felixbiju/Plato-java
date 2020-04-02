@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://172.25.14.113:3306/plato_db</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.timeout">60</property>
+		<property name="hibernate.c3p0.idle_test_period">40</property>
+		
+		
+		
+		<property name="show_sql">true</property>
+		<property name="use_sql_comments">true</property>
+		<property name="show_sql">true</property>
+
+		<mapping class="com.mongo.entities.AccountMaster" />
+		<mapping class="com.mongo.entities.CategoryMaster" />
+		<mapping class="com.mongo.entities.ModuleBuildHistory" />
+		<mapping class="com.mongo.entities.ModuleJobsJenkins" />
+		<mapping class="com.mongo.entities.ModuleJobsJenkinsParameters" />
+		<mapping class="com.mongo.entities.ModuleSubJobsJenkinsParameters" />
+		<mapping class="com.mongo.entities.ModuleSubJobsJenkins" />
+		<mapping class="com.mongo.entities.NodeMaster" />
+		<mapping class="com.mongo.entities.PermissionScreenMaster" />
+		<mapping class="com.mongo.entities.ProjectMaster" />
+		<mapping class="com.mongo.entities.ProjectToolMapping" />
+		<mapping class="com.mongo.entities.RoleMaster" />
+		<mapping class="com.mongo.entities.RolePermissionMapping" />
+		<mapping class="com.mongo.entities.StatusMaster" />
+		<mapping class="com.mongo.entities.ToolMaster" />
+		<mapping class="com.mongo.entities.UserMaster" />
+		<mapping class="com.mongo.entities.UserProjectMapping" />
+
+		<mapping class="com.mongo.entities.TEMApplicationDetail" />
+		<mapping class="com.mongo.entities.TemApplicationResponse" />
+		<mapping class="com.mongo.entities.TEMDatabaseDetail" />
+		<mapping class="com.mongo.entities.TemDatabaseResponse" />
+		<mapping class="com.mongo.entities.TEMServerApplicationMapping" />
+		<mapping class="com.mongo.entities.TEMServerDetail" />
+		<mapping class="com.mongo.entities.TemServerResponse" />
+		<mapping class="com.mongo.entities.PortfolioMaster" />
+		<mapping class="com.mongo.entities.SubjobCheckpoint" />
+		<mapping class="com.mongo.entities.SubjobCheckpointDetails" />
+		
+		<mapping class="com.mongo.entities.CheckpointTemplate" />
+		<mapping class="com.mongo.entities.CheckpointDetailsTemplate" />
+	
+		
+		
+	</session-factory>
+</hibernate-configuration>

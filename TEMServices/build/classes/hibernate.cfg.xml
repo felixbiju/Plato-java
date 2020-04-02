@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- <property name="hibernate.connection.url">jdbc:mysql://172.25.15.179:3306/plato_db</property> -->
+		 <property name="hibernate.connection.url">jdbc:mysql://172.25.14.112:3306/plato_db</property> 
+		
+ 		<!--<property name="hibernate.connection.url">jdbc:mysql://172.25.9.140:3306/plato_db</property> -->
+ 
+ 		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- <property name="hibernate.connection.pool_size">1</property> -->
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.timeout">60</property>
+		<property name="hibernate.c3p0.idle_test_period">40</property>
+		
+
+
+		<property name="show_sql">true</property>
+		<property name="use_sql_comments">true</property>
+		<!-- <property name="current_session_context_class">thread</property> -->
+		<property name="show_sql">true</property>
+
+		<!-- <mapping package="com.plato.tem.entities" /> -->
+
+		<mapping class="com.plato.tem.entities.AccountMaster" />
+		<mapping class="com.plato.tem.entities.CategoryMaster" />
+		<mapping class="com.plato.tem.entities.ModuleBuildHistory" />
+		<mapping class="com.plato.tem.entities.ModuleJobsJenkins" />
+		<mapping class="com.plato.tem.entities.ModuleSubJobsJenkins" />
+		<mapping class="com.plato.tem.entities.NodeMaster" />
+		<mapping class="com.plato.tem.entities.PermissionScreenMaster" />
+		<mapping class="com.plato.tem.entities.ProjectMaster" />
+		<mapping class="com.plato.tem.entities.ProjectToolMapping" />
+		<mapping class="com.plato.tem.entities.RoleMaster" />
+		<mapping class="com.plato.tem.entities.RolePermissionMapping" />
+		<mapping class="com.plato.tem.entities.StatusMaster" />
+		<mapping class="com.plato.tem.entities.ToolMaster" />
+		<mapping class="com.plato.tem.entities.UserMaster" />
+		<mapping class="com.plato.tem.entities.UserProjectMapping" />
+		<mapping class="com.plato.tem.entities.PermissionScreenMaster" />
+		<mapping class="com.plato.tem.entities.ScreenFunctionality" />
+		<mapping class="com.plato.tem.entities.PermissionModuleMaster" />
+		<mapping class="com.plato.tem.entities.RolePermissionMapping" />
+
+		<mapping class="com.plato.tem.entities.TEMApplicationDetail" />
+		<mapping class="com.plato.tem.entities.TemApplicationResponse" />
+		<mapping class="com.plato.tem.entities.TEMDatabaseDetail" />
+		<mapping class="com.plato.tem.entities.TemDatabaseResponse" />
+		<mapping class="com.plato.tem.entities.TEMServerApplicationMapping" />
+		<mapping class="com.plato.tem.entities.TEMServerDetail" />
+		<mapping class="com.plato.tem.entities.TemServerResponse" />
+		<mapping class="com.plato.tem.entities.PortfolioMaster" />
+		<mapping class="com.plato.tem.entities.SubjobCheckpoint" />
+		<mapping class="com.plato.tem.entities.SubjobCheckpointDetails" />
+		<mapping class="com.plato.tem.entities.CheckpointTemplate" />
+		<mapping class="com.plato.tem.entities.CheckpointDetailsTemplate" />
+
+
+
+
+
+	</session-factory>
+</hibernate-configuration>
